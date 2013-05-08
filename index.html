@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,54 +38,97 @@
 			<div class="slides">
 
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>W1004</h1>
+					<h2>in a nutshell</h2>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by <a href="http://donyu.me">Don Yu</a> / <a href="http://twitter.com/don4yu">@don4yu</a></small>
 					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
+						<h2>Algorithms</h2>
+						<ul>
+							<li>Be able to read pseudocode</li>
+							<li>Be able to understand and solve for big-O notation</li>
+							<li>Pay special attention to sorting algorithms</li>
+						</ul>
+						<br/>
+						<br/>
 						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
+							What is the runtime for the following pseudocode (assume A is an array)?
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<pre><code>
+for i = 0 to length(A)
+	int sum = 0;
+	for j = i to length(A)
+		sum += j;
+	A[i] = sum;
+					</code></pre>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<h2>Selection Sort</h2>
+						<p>Searches for the minimum element at each interval and puts that in the front of the unsorted portion of the list</p>
+						<ol>
+							<li>Find minimum value</li>
+							<li>Swap with first unsorted value</li>
+							<li>That value is now sorted. Repeat steps 1-2</li>
+						</ol>
+						<br/>
+						<br/>
+						<p><b>Runtime is O(n^2)</b></p>
+						<br/>
+						<p>
+							Which of the following is a possible intermediate state for the list {11, 7, 5, 2} during selection sort?
+						</p>
+						<ol>
+							<li>{11, 7, 5, 2}</li>
+							<li>{11, 5, 2, 7}</li>
+							<li>{2, 7, 5, 11}</li>
+							<li>{2, 11, 7, 5}</li>
+						</ol>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+						<h2>Insertion Sort</h2>
+						<p>Swap two adjacent elements if necessary as you go through the list</p>
+						<ol>
+							<li>Check 2 elements and swap if necessary</li>
+							<li>Move one step to right and repeat step 1 & 2 until you reach the end of the list</li>
+							<li>First element now sorted and repeat with still unsorted elements</li>
+						</ol>
+						<br/>
+						<br/>
+						<p><b>Runtime is O(n^2)</b></p>
+						<br/>
+						<p>
+							What state is the list {4, 1, 6, 2} in after the 3rd step in the insertion sort algorithm?
+						</p>
+						<ol>
+							<li>{1, 4, 6, 2}</li>
+							<li>{1, 2, 4, 6}</li>
+							<li>{1, 4, 2, 6}</li>
+							<li>{2, 1, 6, 4}</li>
+						</ol>
 					</section>
 					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<h2>Other Algorithms</h2>
+						<ul>
+							<li>Linear Search - O(n)</li>
+							<li>Binary Search - O(logn)</li>
+							<li>Bubble Sort - O(n^2)</li>
+						</ul>
+						<br/>
+						<br/>
+						<p>
+							Which of the following is the big-O runtime for doing a search on an unsorted list?
+						</p>
+						<ol>
+							<li>O(logn)</li>
+							<li>O(n)</li>
+							<li>O(n^2)</li>
+							<li>O(n logn)</li>
+						</ol>
 					</section>
 				</section>
 
